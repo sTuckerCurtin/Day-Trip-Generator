@@ -8,8 +8,9 @@ import random
 def display_list(list):
     for item in list:
         random_item = random.choice(list)
-        print(random_item) 
+        print(random_item)
         return display_list
 
-
 display_list(destinations)
+display_list(restaurants)
+display_list(entertainments)

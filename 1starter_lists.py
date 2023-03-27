@@ -39,8 +39,21 @@ def trip_generator(destinations, restaurants, transportations, entertainments):
     restaurant = random.choice(restaurants)
     transportation = random.choice(transportations)
     entertainment = random.choice(entertainments)
-    print(destination, restaurant, transportation, entertainment)
-    print("Here is your complted trip")
+    #print(destination, restaurant, transportation, entertainment)
+    print("Here is your potential Day Trip ")
+    print(f"Destination : {destination}")
+    print(f"Restaurant: {restaurant}")
+    print(f"Transportation: {transportation}")
+    print(f"Entertainment: {entertainment}")
+    trip_confirmation = input("Do you want to confirm this trip? y/n ")
+    if trip_confirmation == "y":
+         print("Trip Confrimed")
+    else:
+        trip_generator(destinations, restaurants, transportations, entertainments)
+    
+    
+
+
 
 trip_generator(destinations, restaurants, transportations, entertainments)
 
